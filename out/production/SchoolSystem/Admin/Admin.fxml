@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="727.0" prefWidth="1312.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.AdminController">
+   <children>
+      <TabPane layoutX="2.0" prefHeight="720.0" prefWidth="1297.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Students">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="306.0" prefHeight="694.0" prefWidth="975.0" AnchorPane.leftAnchor="306.0">
+                           <children>
+                              <TableView fx:id="studenttable" prefHeight="689.0" prefWidth="967.0">
+                                <columns>
+                                  <TableColumn fx:id="idcolumn" prefWidth="75.0" text="ID" />
+                                  <TableColumn fx:id="firstnamecolumn" prefWidth="221.0" text="First Name" />
+                                    <TableColumn fx:id="lastnamecolumn" prefWidth="201.0" text="Last Name" />
+                                    <TableColumn fx:id="emailcolumn" prefWidth="327.0" text="Email" />
+                                    <TableColumn fx:id="dobcolumn" prefWidth="150.0" text="DOB" />
+                                </columns>
+                              </TableView>
+                           </children>
+                           <padding>
+                              <Insets right="30.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <VBox prefHeight="695.0" prefWidth="307.0">
+                           <children>
+                              <Label prefHeight="29.0" prefWidth="305.0" text="Add Students">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="120.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="id" prefHeight="33.0" prefWidth="307.0" promptText="ID">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="firstname" layoutX="10.0" layoutY="39.0" prefHeight="33.0" prefWidth="307.0" promptText="First Name">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="lastname" layoutX="10.0" layoutY="72.0" prefHeight="33.0" prefWidth="307.0" promptText="Last Name">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="email" layoutX="10.0" layoutY="105.0" prefHeight="33.0" prefWidth="177.0" promptText="Email">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <DatePicker fx:id="dob" prefHeight="25.0" prefWidth="287.0">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </VBox.margin>
+                              </DatePicker>
+                              <Button mnemonicParsing="false" onAction="#addStudent" prefHeight="25.0" prefWidth="267.0" text="Add Entry">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button layoutX="30.0" layoutY="211.0" mnemonicParsing="false" onAction="#ClearFields" prefHeight="25.0" prefWidth="267.0" text="Clear Form">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="236.0" mnemonicParsing="false" onAction="#loadStudentData" prefHeight="25.0" prefWidth="267.0" text="Load Data">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button layoutX="30.0" layoutY="281.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="25.0" prefWidth="267.0" text="Delete">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="-20.0" top="5.0" />
+         </padding>
+      </TabPane>
+   </children>
+</AnchorPane>
